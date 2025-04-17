@@ -1,12 +1,26 @@
 const leftBlock = document.querySelector(".left__block");
+const rightBlock = document.querySelector(".right__block");
+const textBeetle = document.querySelector(".beetle__textblock");
+const openLeft = document.querySelector(".flower__button");
+const openRight = document.querySelector(".butterfly__button");
+const openBeetle = document.querySelector(".beetle__button");
+
 const editModal = document.querySelector(".edit-location__modal");
 const openModal = document.querySelector(".create-location__button");
 const openEditModal = document.querySelector(".location__edit-button");
 const closeModal = document.querySelector(".modal__close-button");
-const openLeft = document.querySelector(".flower__button");
 
 openLeft.addEventListener ('click', () => {
   leftBlock.classList.toggle('left__block--active');
+})
+
+openRight.addEventListener ('click', () => {
+  rightBlock.classList.toggle('right__block--active');
+})
+
+openBeetle.addEventListener ('click', () => {
+  textBeetle.classList.toggle('beetle__textblock--active');
+  openBeetle.classList.toggle('beetle__button--active');
 })
 
 // openModal.addEventListener ('click', () => {
