@@ -111,8 +111,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .center {
-    height: 100%;
     width: 100%;
+    height: 100%;
     top: 0%;
     position: absolute;
     display: flex;
@@ -139,8 +139,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .flower__button {
-    height: 80px;
     width: 42px;
+    height: 80px;
     left: -45%;
     top: 51%;
     position: absolute;
@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .butterfly__button {
     background-image: url(../img/right-wings.png);
-    height: 81px;
     width: 46px;
+    height: 81px;
     top: 19%;
     right: -1.3%;
     position: absolute;
@@ -168,15 +168,20 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.35s ease-in-out;
 }
 
+.butterfly__button--active {
+    background-image: url(../img/right-wings-active.png);
+}
+
 .beetle__button {
     background-image: url(../img/topright.png);
-    height: 210px;
     width: 182px;
+    height: 210px;
     top: -4%;
     right: -2.8%;
     position: absolute;
     border: none;
     background-color: unset;
+    transition: 0.7s ease-in-out;
 }
 
 .beetle__button--active {
@@ -197,6 +202,62 @@ h1, h2, h3, h4, h5, h6 {
 
 .beetle__textblock--active {
     display: block;
+}
+
+.home_button {
+    background-image: url(../img/home.png);
+    width: 71px;
+    height: 42px;
+    top: 7%;
+    right: 11%;
+    position: absolute;
+    border: none;
+    background-color: unset;
+}
+
+.gotop__button {
+    background-image: url(../img/gotop.png);
+    width: 79px;
+    height: 38px;
+    bottom: 6%;
+    right: 35%;
+    position: absolute;
+    border: none;
+    background-color: unset;
+}
+
+.goback__button {
+    background-image: url(../img/goback.png);
+    width: 51px;
+    height: 51px;
+    bottom: 7%;
+    right: 6%;
+    position: absolute;
+    border: none;
+    background-color: unset;
+}
+
+.quotes__button {
+    width: 47px;
+    height: 46px;
+    bottom: 1%;
+    right: 1%;
+    position: absolute;
+}
+
+.quotes__block {
+    background-image: url(../img/quotes-bottom.png);
+    width: 412px;
+    height: 205px;
+    bottom: 5%;
+    right: 35%;
+    position: absolute;
+    z-index: 1;
+    transition: 0.7s ease-in-out;
+}
+
+.quotes__block--active {
+    bottom: -13%;
 }
 
 /*--------Footer--------*/
