@@ -1,0 +1,12 @@
+html {
+    box-sizing: border-box;
+    margin: 0 0;
+    scroll-behavior: smooth;
+    background-image: none;
+    font-family: 'Secession','WanderOverYonder','pixelfont','Mercutio';
+}
+
+body {
+    color: #313131;
+    width: fit-content;
+}

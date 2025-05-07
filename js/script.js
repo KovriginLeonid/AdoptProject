@@ -14,6 +14,7 @@ const closeModal = document.querySelector(".modal__close-button");
 
 openLeft.addEventListener ('click', () => {
   leftBlock.classList.toggle('left__block--active');
+  openLeft.classList.toggle('flower__button--active');
 })
 
 openRight.addEventListener ('click', () => {
@@ -28,6 +29,7 @@ openBeetle.addEventListener ('click', () => {
 
 openQuotes.addEventListener ('click', () => {
   textQuotes.classList.toggle('quotes__block--active');
+  openQuotes.classList.toggle('quotes__button--active');
 })
 
 // openModal.addEventListener ('click', () => {

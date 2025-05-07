@@ -6,6 +6,7 @@ html {
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Secession','WanderOverYonder','pixelfont','Mercutio';
 }
 
 body {
@@ -44,7 +45,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0px;
 }
 
-@keyframes rotateZ {
+button {
+    border: none;
+    background-color: unset;
+    transition: 0.7s ease-in-out;
+}
+
+/* @keyframes rotateZ {
     from {
         transform: rotateZ(0deg);
     }
@@ -56,9 +63,58 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes fade {
     from { opacity: 0;}
     to { opacity: 1;}
-}
+} */
 
-/*--------Header--------*/
+/*--------Fonts--------*/
+/* WanderOverYonderRegular */
+@font-face {
+	font-family: 'WanderOverYonder';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Wander Over Yonder'),
+		 url('../fonts/WanderOverYonderRegular.ttf') format('truetype'), /* Modern Browsers */
+  }
+  /* pixelfont */
+  @font-face {
+	font-family: 'pixelfont';
+	font-style: normal;
+	font-weight: 300;
+	src: local(''),
+		 url('../fonts/pixelfont_7.ttf') format('truetype'), /* Modern Browsers */
+  }
+  /* Mercutio */
+  @font-face {
+	font-family: 'Mercutio';
+	font-style: normal;
+	font-weight: 300;
+	src: local(''),
+		 url('../fonts/MercutioNbpBasic.ttf') format('truetype'), /* Modern Browsers */
+
+  }
+  /* Secession */
+  @font-face {
+	font-family: 'Secession';
+	font-style: normal;
+	font-weight: 300;
+	src: local(''),
+		 url('../fonts/Secession.ttf') format('truetype'), /* Modern Browsers */
+  }
+
+  @font-face {
+	font-family: 'Secession';
+	font-style: normal;
+	font-weight: 500;
+	src: local(''),
+		 url('../fonts/Secession_Bold.ttf') format('truetype'), /* Modern Browsers */
+  }
+
+  @font-face {
+	font-family: 'Secession';
+	font-style: italic;
+	font-weight: 200;
+	src: local(''),
+		 url('../fonts/Secession_Light.ttf') format('truetype'), /* Modern Browsers */
+  }
 
 /*--------Main--------*/
 .whole-menu {
@@ -90,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-block {
-    background-image: url(../img/main.png);
+    background-image: url(../img/main-sockets.png);
     width: 1262px;
     height: 868px;
     z-index: 5;
@@ -121,38 +177,79 @@ h1, h2, h3, h4, h5, h6 {
 .navigation__block {
     width: 250px;
     height: 100%;
-    /* margin-top: 75px;
-    margin-left: 160px; */
     display: flex;
-    align-items: center;
     position: relative;
-    left: 6%;
-    margin-left: 50px;
+    /* left: 6%;
+    margin-left: 50px; */
+}
+
+.navigation__container {
+    margin-left: 105px;
+    margin-top: 140px;
 }
 
 .navigation__item {
-    padding: 20px;
-    margin-bottom: 15px;
+    padding: 10px 20px;
+    margin-bottom: 11px;
     border: 2px solid;
     border-radius: 60px;
     border-color: #8381D8;
+    text-align: center;
+}
+
+.navigation__item:hover a {
+    color: #D991F4;
+}
+
+.navigation__item:last-child {
+    width: 223px;
+    height: 223px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.navigation__text {
+    font-family: 'WanderOverYonder';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1;
+    color: #EDE9FF;
 }
 
 .flower__button {
-    width: 42px;
+    background-image: url(../img/flower.png);
+    width: 49px;
     height: 80px;
-    left: -45%;
+    left: -1%;
     top: 51%;
     position: absolute;
 }
 
-.main-content__block {
-    display: flex;
+.flower__button--active {
+    background-image: url(../img/flower-active.png);
 }
 
-.article__block {
+.pipes {
+    background-image: url(../img/pipes.gif);
+    width: 411px;
+    height: 80px;
+    left: 63.9%;
+    bottom: -0.2%;
+    position: absolute;
+}
+
+.main-content__block {
+    margin-left: 110px;
     width: 880px;
     height: 868px;
+}
+
+.article__frame {
+    height: 680px;
+    width: 770px;
+    margin-top: 75px;
+    margin-left: 45px;
 }
 
 .butterfly__button {
@@ -162,10 +259,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 19%;
     right: -1.3%;
     position: absolute;
-    border: none;
-    background-color: unset;
     z-index: 2;
-    transition: 0.35s ease-in-out;
 }
 
 .butterfly__button--active {
@@ -173,19 +267,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .beetle__button {
-    background-image: url(../img/topright.png);
+    background-image: url(../img/topright-animated.gif);
     width: 182px;
     height: 210px;
     top: -4%;
     right: -2.8%;
     position: absolute;
-    border: none;
-    background-color: unset;
-    transition: 0.7s ease-in-out;
 }
 
 .beetle__button--active {
-    background-image: url(../img/toprightactive.png);
+    background-image: url(../img/topright-active.png);
 }
 
 .beetle__textblock {
@@ -211,8 +302,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 7%;
     right: 11%;
     position: absolute;
-    border: none;
-    background-color: unset;
 }
 
 .gotop__button {
@@ -222,8 +311,6 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 6%;
     right: 35%;
     position: absolute;
-    border: none;
-    background-color: unset;
 }
 
 .goback__button {
@@ -233,16 +320,19 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 7%;
     right: 6%;
     position: absolute;
-    border: none;
-    background-color: unset;
 }
 
 .quotes__button {
+    background-image: url(../img/bottom-quotes.png);
     width: 47px;
     height: 46px;
-    bottom: 1%;
-    right: 1%;
+    bottom: 0.7%;
+    right: 1.3%;
     position: absolute;
+}
+
+.quotes__button--active {
+    background-image: url(../img/bottom-quotes-active.png);
 }
 
 .quotes__block {
