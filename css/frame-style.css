@@ -10,3 +10,15 @@ body {
     color: #313131;
     width: fit-content;
 }
+
+.img-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.img-block {
+    width: 200px;
+    height: 150px;
+}

@@ -6,6 +6,10 @@ const openLeft = document.querySelector(".flower__button");
 const openRight = document.querySelector(".butterfly__button");
 const openBeetle = document.querySelector(".beetle__button");
 const openQuotes = document.querySelector(".quotes__button");
+const openShrooms = document.querySelector(".shrooms__button");
+const openHome = document.querySelector(".home_button");
+
+let timeout;
 
 const editModal = document.querySelector(".edit-location__modal");
 const openModal = document.querySelector(".create-location__button");
@@ -32,17 +36,36 @@ openQuotes.addEventListener ('click', () => {
   openQuotes.classList.toggle('quotes__button--active');
 })
 
-// openModal.addEventListener ('click', () => {
-//     modal.showModal();
-// })
+openShrooms.addEventListener ('click', () => {
+  openShrooms.classList.toggle('shrooms__button--active');
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    openShrooms.classList.remove('shrooms__button--active');
+  }, 3000); // 3000 milliseconds = 3 seconds
+});
 
-openEditModal.addEventListener ('click', () => {
-    editModal.showModal();
+openHome.addEventListener ('click', () => {
+  openHome.classList.toggle('home_button--active');
 })
 
-closeModal.addEventListener ('click', () => {
-    modal.close();
-})
+
+import Viewer from '../node_modules/viewerjs/dist/viewer';
+
+
+// View an image.
+const viewer = new Viewer(document.getElementById('image'), {
+  inline: true,
+  viewed() {
+    viewer.zoomTo(1);
+  },
+});
+// Then, show the image by clicking it, or call `viewer.show()`.
+
+// View a list of images.
+// Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
+const gallery = new Viewer(element.querySelectorAll('img'));
+// Then, show one image by click it, or call `gallery.show()`.
+gallery.show()
 
 
 
