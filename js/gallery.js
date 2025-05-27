@@ -1,4 +1,4 @@
-import Viewer from '/viewerjs';
+import Viewer from '../node_modules/viewerjs/dist/viewer.js';
 const galleryBox = document.getElementById('images');
 
 // View an image.
