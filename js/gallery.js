@@ -1,4 +1,4 @@
-import Viewer from "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.7/viewer.js";
+import Viewer from "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.7/viewer.esm.js";
 const galleryBox = document.getElementById('images');
 
 // View an image.
