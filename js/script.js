@@ -16,6 +16,7 @@ const openModal = document.querySelector(".create-location__button");
 const openEditModal = document.querySelector(".location__edit-button");
 const closeModal = document.querySelector(".modal__close-button");
 
+
 openLeft.addEventListener ('click', () => {
   leftBlock.classList.toggle('left__block--active');
   openLeft.classList.toggle('flower__button--active');
